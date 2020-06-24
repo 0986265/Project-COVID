@@ -131,7 +131,7 @@ class Game {
             gun?.setAttribute("style", "display:block;")
             console.log("Handgun")
 
-            gun1?.setAttribute("style", "background-color:lightgrey; display:block; opacity: 100%;")
+            gun1?.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;")
             if (this.Ar == true) { gun2?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
             if (this.Sg == true) { gun3?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
 
@@ -147,7 +147,7 @@ class Game {
             console.log("Assault Rifle")
 
             if (this.Hg == true) { gun1?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
-            gun2?.setAttribute("style", "background-color:lightgrey; display:block; opacity: 100%;")
+            gun2?.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;")
             if (this.Sg == true) { gun3?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
 
         } if (hit2 == true && this.score >= 200 && this.player.e == true) {
@@ -163,7 +163,7 @@ class Game {
 
             if (this.Hg == true) { gun1?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
             if (this.Ar == true) { gun2?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
-            gun3?.setAttribute("style", "background-color:lightgrey; display:block; opacity: 100%;")
+            gun3?.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;")
         }
     }
 
@@ -177,7 +177,7 @@ class Game {
         if (this.player.key1 == true && this.Hg == true) {
             this.player.gun = 1
 
-            gun1?.setAttribute("style", "background-color:lightgrey; display:block; opacity: 100%;")
+            gun1?.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;")
             if (this.Ar == true) { gun2?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
             if (this.Sg == true) { gun3?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
         }
@@ -185,7 +185,7 @@ class Game {
             this.player.gun = 2
 
             if (this.Hg == true) { gun1?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
-            gun2?.setAttribute("style", "background-color:lightgrey; display:block; opacity: 100%;")
+            gun2?.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;")
             if (this.Sg == true) { gun3?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
         }
         else if (this.player.key2 == true && this.Sg == true) {
@@ -193,7 +193,7 @@ class Game {
 
             if (this.Hg == true) { gun1?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
             if (this.Ar == true) { gun2?.setAttribute("style", "background-color:none; display:block; opacity: 100%;") }
-            gun3?.setAttribute("style", "background-color:lightgrey; display:block; opacity: 100%;")
+            gun3?.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;")
         }
     }
 

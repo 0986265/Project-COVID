@@ -48,10 +48,11 @@ game {
    display: flex;
    align-items: center;
    padding-left: 5px;
-   z-index: 1;
+   z-index: 4;
 }
 
 #handgun{
+   z-index: 4;
    position: absolute;
    top: 100px;
    width: 100px;
@@ -59,6 +60,7 @@ game {
    image-rendering: pixelated;
 }
 #assultgun{
+   z-index: 4;
    position: absolute;
    top: 300px;
    width: 100px;
@@ -67,6 +69,7 @@ game {
 }
 
 #shotgun{
+   z-index: 4;
    position: absolute;
    top: 200px;
    width: 100px;
@@ -191,10 +194,11 @@ guntip2 {
 }
 
 guntip3 {
+   z-index: 4;
    position: absolute;
    width: 300px;
-   height: 236px;
-   top: 110px;
+   height: 270px;
+   top: 90px;
    left: 120px;
    display: block;
    background-image: url("../images/tips/Swap.png");
@@ -295,15 +299,6 @@ hitbox {
    -webkit-text-stroke: .3px white;
 }
 
-.guns {
-   position: absolute;
-   padding: 10px;
-   width: 1800px;
-   top: 0px;
-   display: flex;
-   align-items: center;
-   z-index: 1;
-}
 
 alarm {
    position: absolute;
