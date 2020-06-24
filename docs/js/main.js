@@ -284,7 +284,7 @@ var Game = (function () {
             var gun = document.getElementById("handgun");
             gun === null || gun === void 0 ? void 0 : gun.setAttribute("style", "display:block;");
             console.log("Handgun");
-            gun1 === null || gun1 === void 0 ? void 0 : gun1.setAttribute("style", "background-color:blue; display:block; opacity: 100%;");
+            gun1 === null || gun1 === void 0 ? void 0 : gun1.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;");
             if (this.Ar == true) {
                 gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
@@ -297,13 +297,14 @@ var Game = (function () {
             this.player.gun = 2;
             this.Ar = true;
             this.ARitem.div.remove();
+            this.GT3 = true;
             var gun = document.getElementById("assultgun");
             gun === null || gun === void 0 ? void 0 : gun.setAttribute("style", "display:block;");
             console.log("Assault Rifle");
             if (this.Hg == true) {
                 gun1 === null || gun1 === void 0 ? void 0 : gun1.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
-            gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:blue; display:block; opacity: 100%;");
+            gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;");
             if (this.Sg == true) {
                 gun3 === null || gun3 === void 0 ? void 0 : gun3.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
@@ -323,7 +324,7 @@ var Game = (function () {
             if (this.Ar == true) {
                 gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
-            gun3 === null || gun3 === void 0 ? void 0 : gun3.setAttribute("style", "background-color:blue; display:block; opacity: 100%;");
+            gun3 === null || gun3 === void 0 ? void 0 : gun3.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;");
         }
     };
     Game.prototype.gunSwitch = function () {
@@ -332,7 +333,7 @@ var Game = (function () {
         var gun3 = document.getElementById("shotgun");
         if (this.player.key1 == true && this.Hg == true) {
             this.player.gun = 1;
-            gun1 === null || gun1 === void 0 ? void 0 : gun1.setAttribute("style", "background-color:blue; display:block; opacity: 100%;");
+            gun1 === null || gun1 === void 0 ? void 0 : gun1.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;");
             if (this.Ar == true) {
                 gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
@@ -345,7 +346,7 @@ var Game = (function () {
             if (this.Hg == true) {
                 gun1 === null || gun1 === void 0 ? void 0 : gun1.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
-            gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:blue; display:block; opacity: 100%;");
+            gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;");
             if (this.Sg == true) {
                 gun3 === null || gun3 === void 0 ? void 0 : gun3.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
@@ -358,7 +359,7 @@ var Game = (function () {
             if (this.Ar == true) {
                 gun2 === null || gun2 === void 0 ? void 0 : gun2.setAttribute("style", "background-color:none; display:block; opacity: 100%;");
             }
-            gun3 === null || gun3 === void 0 ? void 0 : gun3.setAttribute("style", "background-color:blue; display:block; opacity: 100%;");
+            gun3 === null || gun3 === void 0 ? void 0 : gun3.setAttribute("style", "background-color:#33A6B5; display:block; opacity: 100%;");
         }
     };
     Game.prototype.checkIfHitHealthPoint = function () {
@@ -381,31 +382,31 @@ var Game = (function () {
     Game.prototype.spawnEnemiesInLevel = function () {
         if (this.switch1 == false) {
             if (this.level.levelX < -10) {
-                this.spawnEnemies(1, 1500, 1600, 2);
+                this.spawnEnemies(1, 1900, 2000, 2);
                 this.switch1 = true;
             }
         }
         if (this.switch2 == false) {
             if (this.level.levelX < -1200) {
-                this.spawnEnemies(1, 2200, 2400, 4);
+                this.spawnEnemies(1, 2700, 2600, 4);
                 this.switch2 = true;
             }
         }
         if (this.switch3 == false) {
-            if (this.level.levelX < -2200) {
-                this.spawnEnemies(3, 3300, 3500, 5);
+            if (this.level.levelX < -2500) {
+                this.spawnEnemies(3, 3800, 3800, 5);
                 this.switch3 = true;
             }
         }
         if (this.switch4 == false) {
-            if (this.level.levelX < -4200) {
-                this.spawnEnemies(5, 5200, 5500, 6);
+            if (this.level.levelX < -4000) {
+                this.spawnEnemies(5, 5500, 5800, 6);
                 this.switch4 = true;
             }
         }
         if (this.switch5 == false) {
-            if (this.level.levelX < -6500) {
-                this.spawnEnemies(15, 8000, 12000, 7);
+            if (this.level.levelX < -4200) {
+                this.spawnEnemies(18, 5200, 18000, 7);
                 this.switch5 = true;
             }
         }
@@ -454,7 +455,7 @@ var Game = (function () {
             setTimeout(function () {
                 var tip = document.getElementsByTagName("guntip3");
                 tip[0].remove();
-            }, 6000);
+            }, 12000);
         }
     };
     Game.prototype.enemyDestroyedChecker = function () {
@@ -635,7 +636,7 @@ var Player = (function () {
         this.direction = 0;
         this.movespeed = 0;
         this.weapon = 0;
-        this.playerHealth = [1, 1, 1, 1, 1];
+        this.playerHealth = [1, 1, 1, 1, 1,];
         this.x = 0;
         this.y = 0;
         this.playerX = 0;

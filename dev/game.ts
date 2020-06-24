@@ -297,7 +297,7 @@ class Game {
             setTimeout(() => {
                 let tip = document.getElementsByTagName("guntip3")
                 tip[0].remove()
-            }, 6000);
+            }, 12000);
         }
     }
 
