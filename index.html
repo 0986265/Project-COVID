@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CLE 4</title>
+</head>
+
+<body>
+    <div id="videodiv" class="video">
+        <video id="video" src="images/Intro.mp4" autoplay></video>
+    </div>
+
+    <div class="center">
+        <game>
+
+            <flex id="flex" class="healthrow">
+                <div id="score"></div>
+            </flex>
+            <guns class="guns">
+                <img id="handgun" src="images/items/HG.png">
+                <img id="shotgun" src="images/items/SG.png">
+                <img id="assultgun" src="images/items/AR.png">
+            </guns>
+        </game>
+    </div>
+    <div id="respawn" class="respawn">
+        <div class="respawn-content">
+            <h1>You died!</h1>
+            <p>Click here to respawn</p>
+        </div>
+
+    </div>
+    <div id="endlevel" class="endlevel">
+        <div class="endlevel-content">
+            <h1>You made it</h1>
+            <p>Click here to replay this level</p>
+        </div>
+    </div>
+    <script src='docs/js/main.js'></script>
+</body>
+
+</html>

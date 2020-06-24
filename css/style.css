@@ -1,0 +1,428 @@
+html, body {
+   margin: 0;
+   border: 0;
+   padding: 0;
+}
+
+html { 
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
+
+@font-face {
+   font-family: "PixelFont";
+   src: url(../fonts/sf-pixelate.ttf) format("truetype");
+}
+
+.center {
+   width: 100%;
+   height: 800px;
+}
+
+video{
+   size: 100px;
+   position: absolute;
+}
+
+.video{
+   background: black;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   z-index: 6;
+}
+
+game {
+   position: relative;
+   padding-top: 900px; /* 16:10 Aspect Ratio */
+   display: block;
+   background-color: black;
+   clip-path: inset(0% 0% 0% 0%);
+}
+
+.guns {
+   position: absolute;
+   image-rendering: pixelated;
+   width: 1800px;
+   top: 0px;
+   display: flex;
+   align-items: center;
+   padding-left: 5px;
+   z-index: 1;
+}
+
+#handgun{
+   position: absolute;
+   top: 100px;
+   width: 100px;
+   opacity: 20%;
+   image-rendering: pixelated;
+}
+#assultgun{
+   position: absolute;
+   top: 300px;
+   width: 100px;
+   opacity: 20%;
+   image-rendering: pixelated;
+}
+
+#shotgun{
+   position: absolute;
+   top: 200px;
+   width: 100px;
+   opacity: 20%;
+   image-rendering: pixelated;
+}
+
+end {
+   position: absolute;
+   width: 200px;
+   height: 1500px;
+   background-image: url("../images/timeitem2.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   color: black;
+}
+
+level {
+   position: absolute;
+   width: 15143px;
+   height: 100%;
+   top: 0;
+   right: 0px;
+}
+
+bg {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("../images/bg_lab.png");
+   background-size: auto 900px;
+   image-rendering: pixelated;
+   /* filter: saturate(90%); */
+   filter: contrast(90%);
+}
+
+bg2 {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("../images/bg_lab_par.png");
+   image-rendering: pixelated;
+   background-size: 50;
+   background-size: auto 900px;
+   filter: saturate(90%);
+}
+
+fg {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("../images/fg_lab.png");
+   background-size: auto 900px;
+   image-rendering: pixelated;
+   filter: saturate(90%);
+   z-index: 2;
+}
+
+player {
+   position: absolute;
+   width: 300px;
+   height: 300px;
+   top: 0px;
+   left: 0px;
+   background-image: url("../images/player/player_idle.gif");
+   background: rgba(0, 0, 0, 0);
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   transform: scaleX(1);
+   z-index: 1;
+}
+
+.healthrow {
+   position: absolute;
+   width: 1800px;
+   top: 0px;
+   display: flex;
+   align-items: center;
+}
+
+enemy {
+   position: absolute;
+   width: 300px;
+   height: 300px;
+   top: 0px;
+   left: 0px;
+   background-image: url("../images/enemy/enemyWalkLeft.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   transform: scaleX(1);
+   opacity: 100%;
+   transition: opacity 100ms ease-in-out;
+}
+
+guntip {
+   position: absolute;
+   width: 300px;
+   height: 100px;
+   top: 400px;
+   left: 400px;
+   display: block;
+   background-image: url("../images/tips/PressE.png");
+}
+
+guntip2 {
+   position: absolute;
+   width: 300px;
+   height: 100px;
+   top: 400px;
+   left: 2775px;
+   display: block;
+   background-image: url("../images/tips/Points.png");
+}
+
+guntip3 {
+   position: absolute;
+   width: 300px;
+   height: 236px;
+   top: 110px;
+   left: 120px;
+   display: block;
+   background-image: url("../images/tips/Swap.png");
+}
+
+.respawn {
+   position: fixed; /* Stay in place */
+   padding-top: 100px; /* Location of the box */
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   top: 0;
+   left: 0;
+   display: none; /* Hidden by default */
+   background-image: url("../images/hud/dead.gif");
+   background-repeat: repeat-x;
+   background-size: cover;
+   overflow: auto; /* Enable scroll if needed */
+   z-index: 2; /* Sit on top */
+ }
+
+.respawn-content {
+   margin: 50px auto;
+   padding: 20px;
+   width: 800px;
+   height: 400px;
+   font-family: PixelFont;
+   text-align: center;
+}
+
+.respawn-content h1{
+   font-size: 100px;
+   margin-bottom: 300px;
+}
+
+.endlevel {
+   position: fixed; /* Stay in place */
+   padding-top: 100px; /* Location of the box */
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   top: 0;
+   left: 0;
+   display: none; /* Hidden by default */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   background-image: url("../images/hud/confetti-gif-png-8.gif");
+   overflow: auto; /* Enable scroll if needed */
+   z-index: 2; /* Sit on top */
+ }
+
+.endlevel-content {
+   margin: 50px auto;
+   padding: 20px;
+   width: 800px;
+   height: 400px;
+   text-align: center;
+   font-family: PixelFont;
+   color: white;
+   font-size: 30px;
+}
+
+.endlevel-content h1{
+   font-size: 100px;
+   margin-bottom: 300px;
+}
+
+
+
+hitbox {
+   /* border: 2px solid blue; */
+   width:  100px;
+   height: 300px;
+   display: block;
+   transform: translateX(90px);
+}
+
+/*----HUD-----*/
+#health{
+   position: relative;
+   margin: -5px -8px 0 0;
+   top: 0px;
+   width: 100px;
+   height: 100px;
+   background-image: url("../images/hud/healt_glitch_16x16.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   z-index: 3;
+}
+
+#score{
+   position: absolute;
+   right: 0px;
+   text-align: right;
+   font-family: PixelFont;
+   font-size: 55px;
+   color: #121212;
+   z-index: 3;
+   -webkit-text-stroke: .3px white;
+}
+
+.guns {
+   position: absolute;
+   padding: 10px;
+   width: 1800px;
+   top: 0px;
+   display: flex;
+   align-items: center;
+   z-index: 1;
+}
+
+alarm {
+   position: absolute;
+   /* border: 1px solid green; */
+   width: 125px;
+   height: 125px;
+   top: 55px;
+   left: 8800px;
+   display: block;
+   background-image: url("../images/alarm.gif");
+   background-repeat: no-repeat;
+   image-rendering: pixelated;
+   transform: scale(2);
+   filter: contrast(90%);
+}
+
+
+/*-----ITEMS-----*/
+hp {
+   position: absolute;
+   /* border: 1px solid green; */
+   width: 100px;
+   height: 100px;
+   top: 768px;
+   left: 6200px;
+   display: block;
+   background-image: url("../images/items/healthpoint_item_24x24.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   transform: scale(1.25);
+}
+
+HGitem {
+   position: absolute;
+   width: 300px;
+   height: 300px;
+   top: 0px;
+   left: 0px;
+   background-image: url("../images/items/HGitem.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   transform: scaleX(1);
+}
+
+hitboxHGitem {
+   width:  100px;
+   height: 55px;
+   display: block;
+   transform: translate(99px, 230px);
+}
+
+bullet {
+   position: absolute;
+   width: 12px;
+   height: 6px;
+   display: block;
+   background-image: url("../images/items/bulletHG.png");
+   background-size: 100%;
+   image-rendering: pixelated;
+}
+
+ARitem {
+   position: absolute;
+   width: 300px;
+   height: 300px;
+   top: 0px;
+   left: 0px;
+   background-image: url("../images/items/ARitem.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   transform: scaleX(1);
+}
+
+hitboxARitem {
+   width:  125px;
+   height: 75px;
+   display: block;
+   transform: translate(95px, 210px);
+}
+
+bulletAR {
+   position: absolute;
+   width: 18px;
+   height: 6px;
+   display: block;
+   background-image: url("../images/items/bulletAR.png");
+   background-size: 100%;
+   image-rendering: pixelated;
+}
+
+SGitem {
+   position: absolute;
+   width: 300px;
+   height: 300px;
+   top: 0px;
+   left: 0px;
+   background-image: url("../images/items/SGitem.gif");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   image-rendering: pixelated;
+   transform: scaleX(1);
+}
+
+bulletSG {
+   position: absolute;
+   width: 20px;
+   height: 28px;
+   display: block;
+   background-image: url("../images/items/bulletSG.png");
+   background-size: 100%;
+   image-rendering: pixelated;
+}
+
+hitboxSGitem {
+   width:  140px;
+   height: 60px;
+   display: block;
+   transform: translate(85px, 225px);
+}

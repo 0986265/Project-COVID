@@ -1,0 +1,37 @@
+Report created: 
+	22-6-2020	12:41:14
+
+Project name: Intro.aep
+
+Source files collected to: 
+	D:\Desktop\Intro\Intro folder
+
+Source files collected: All
+
+Collected comps:  
+	Comp 1
+	run left
+	Y
+	W
+	W
+	1600 900
+	
+Number of collected files:  6
+
+Size of collected files:  202 KB
+
+Collected source files: 
+	D:\Desktop\bram\media\guy.png
+	D:\Desktop\bram\media\hero.png
+	D:\Desktop\bram\media\Labbackground.png
+	D:\Desktop\bram\media\Player_Run_Animation_Left.gif
+	D:\Desktop\bram\media\table+jar.png
+	D:\Desktop\bram\media\textbalk.png
+	
+Rendering plug-ins:
+	Classic 3D
+	
+Layer:  Text Layer
+	External dependencies:  
+		Font family: “Arial”, Font style: “Regular”
+
